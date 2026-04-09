@@ -1,98 +1,115 @@
-# retail-analysis-sample
-This is a Doku for retail analysis sample with Power BI.
+# 📊 Retail Sales Performance & Profitability Analysis
 
-Source: 
-https://docs.microsoft.com/en-us/power-bi/sample-retail-analysis from http://obvience.com/
+## 🔍 Overview
+This project presents an end-to-end retail analytics dashboard built using Power BI to analyze sales performance, profitability, and operational efficiency across stores, districts, and product categories.
 
-Before going further, we need understand the concept of the data model, please read the link below:
-https://en.wikipedia.org/wiki/Data_model
+The dashboard enables both high-level business monitoring and deep-dive analysis to support data-driven decision making.
 
-This analysis contains 4 entity (table) and every table has to attribute.
+---
 
-1. store:
-* LocationID
-* City Name	
-* Territory	
-* PostalCode	
-* OpenDate	
-* SellingAreaSize	
-* DistrictName	
-* Name	
-* StoreNumberName	
-* StoreNumber	
-* City	
-* Chain	
-* DM	
-* DM_Pic	
-* DistrictID	
-* Open Month No	
-* Open Month	
-* Open Year	
-* Store Type
+## 📌 Dashboard Structure
+The solution is organized into multiple analytical layers:
 
-2. item
-* ItemID	
-* Segment	
-* Category	
-* Buyer	
-* FamilyNane
+- **Overview**
+  - Business KPIs and summary insights
+- **Store Analysis**
+  - Store performance and expansion trends
+- **District Analysis**
+  - Regional sales and variance tracking
+- **Item Analysis**
+  - Product category and buyer-level performance
 
-3. time
-* ReportingPeriodID	
-* Period	
-* FiscalYear	
-* FiscalMonth	
-* Month
+---
 
-4. district
-* District	
-* DM	
-* DM_Pic_fl	DM_Pic	
-* BusinessUnitID	
-* DMImage
+## 📈 Key Metrics
+- Total Sales: **$45M+**
+- Gross Margin
+- Total Units Sold
+- Sales Variance (%)
+- Sales per Sq Ft
+- Average Unit Price
 
-5. sales fact
-* MonthID	
-* ItemID	
-* LocationID	
-* Sum_GrossMarginAmount	
-* Sum_Regular_Sales_Dollars	
-* Sum_Markdown_Sales_Dollars	
-* ScenarioID	
-* ReportingPeriodID	
-* Sum_Regular_Sales_Units	
-* Sum_Markdown_Sales_Units
+---
 
+## ⚙️ Data Model
+- **Fact Table:**
+  - Sales
 
-### Let's make the data model from the 4 entity. Just drag every [Primary Key](https://en.wikipedia.org/wiki/Primary_key) of the entity in power pivot or power bi data model
-![retail analysis sample data model](https://user-images.githubusercontent.com/27078712/40864635-e6a6188e-65f4-11e8-8d18-22021f05a6d5.PNG)
+- **Dimension Tables:**
+  - Store
+  - Item
+  - District
+  - Time
 
-### After that, create [a measure in power bi or power pivot](https://docs.microsoft.com/en-us/power-bi/desktop-tutorial-create-measures)
+- Designed using a **star-schema inspired model** to ensure efficient querying and scalability.
 
-Below are the measure of every graph,
+---
 
-Note! we use the format of table and attribut with [DAX language](https://docs.microsoft.com/en-us/power-bi/desktop-quickstart-learn-dax-basics) 
+## 🧮 DAX Measures
+Implemented multiple business-critical measures, including:
 
-Extras: [Quick Guide DAX](https://support.office.com/en-us/article/quickstart-learn-dax-basics-in-30-minutes-51744643-c2a5-436a-bdf6-c895762bec1a?omkt=en-US&ui=en-US&rs=en-US&ad=US)
+- Total Sales  
+- Total Units  
+- Gross Margin  
+- Sales Variance %  
+- Year-over-Year Sales  
+- Sales per Sq Ft  
+- Average Unit Price  
+- Top/Bottom Category Sales  
 
----------------------------------------------------------------------------
-Drag this entity for every graph
+---
 
-* This Year Sales by Chance graph:
+## 📊 Analytics Performed
+- Year-over-Year (YoY) Sales Comparison  
+- Monthly Sales Trend Analysis  
+- Sales Variance Analysis  
+- Top & Bottom Performing Categories  
+- Buyer-Level Performance Analysis  
+- District-Level Sales Comparison  
+- Geographic Sales Distribution  
 
+---
 
+## 🔮 Advanced Features
+### What-If Analysis
+- Simulates unit price changes
+- Dynamically predicts revenue impact
+- Supports scenario-based decision making
 
-1. (Store)[Chain] 
+---
 
-2. (Sales)[This Year Sales] := [TotalSalesTY]
+## 🛠️ Tools & Technologies
+- **Power BI**
+- **DAX (Data Analysis Expressions)**
+- Data Modeling
+- Data Visualization
 
-DAX -> TotalSalesTY = CALCULATE([TotalSales], Sales[ScenarioID]=1)
+---
 
-* New Stores graph: 
-.
-.
-.coming soon
+## 💡 Business Value
+This dashboard helps stakeholders:
 
+- Identify high-performing and underperforming regions  
+- Analyze product-level profitability  
+- Monitor trends across time and geography  
+- Optimize pricing strategies using scenario analysis  
+- Make informed, data-driven decisions  
 
+---
 
+## 📸 Dashboard Preview
+*(Add screenshots of your dashboard here)*
 
+---
+
+## 🚀 How to Use
+1. Download the `.pbix` file  
+2. Open in Power BI Desktop  
+3. Interact with filters and slicers to explore insights  
+
+---
+
+## 📬 Contact
+For any questions or feedback, feel free to connect.
+
+- LinkedIn: https://www.linkedin.com/in/chetaninjavarapu/
